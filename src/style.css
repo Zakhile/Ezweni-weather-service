@@ -1,12 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: "Segoe UI", Arial, sans-serif;
-  background: linear-gradient(180deg, #5bc6f7 0%, #b3e0fc 100%);
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: linear-gradient(180deg, #5bc6f7 0%, #b3e0fc 100%);
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 800px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
+  backdrop-filter: blur(6px);
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
 }
 
 .weather-app {
@@ -17,8 +33,9 @@ body {
   border-radius: 20px;
   box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
   width: 100%;
-  max-width: 360px;
+  max-width: 600px;
   backdrop-filter: blur(10px);
+  margin: 0 auto;
 }
 
 .search-bar {
@@ -48,6 +65,11 @@ body {
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+}
+
+#search-button:focus {
+  outline: 2px solid #0056b3;
+  outline-offset: 2px;
 }
 
 #search-button:hover {

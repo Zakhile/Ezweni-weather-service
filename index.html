@@ -3,74 +3,78 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.css" />
     <title>Ezweni weather service</title>
   </head>
   <body>
-    <header>
-      <h1>Ezweni Weather Service</h1>
-      <p>Get the latest weather updates for your city.</p>
-    </header>
-    <main class="weather-app">
-      <section class="search-section">
-        <form id="search-form">
-          <input
-            type="text"
-            id="city-input"
-            placeholder="Enter city name"
-            aria-label="City Name" />
-          <button type="submit">Search</button>
-        </form>
-      </section>
-      <section class="datetime">
-        <p id="date">Friday, 4th July</p>
-        <p id="time" class="time-large">10:06am</p>
-      </section>
+    <div class="app-container">
+      <header>
+        <h1>Ezweni Weather Service</h1>
+        <p>Get the latest weather updates for your city.</p>
+      </header>
+      <main class="weather-app">
+        <section class="search-section">
+          <form id="search-form">
+            <input
+              type="text"
+              id="city-input"
+              placeholder="Enter city name"
+              aria-label="City Name" />
+            <button type="submit">Search</button>
+          </form>
+        </section>
+        <section class="datetime">
+          <p id="date">Friday, 4th July</p>
+          <p id="time" class="time-large">10:06am</p>
+        </section>
 
-      <section class="location">
-        <h2 id="location">London</h2>
-      </section>
+        <section class="location">
+          <h2 id="location">London</h2>
+        </section>
 
-      <section class="current-weather">
-        <div class="weather-icon"></div>
-        <div id="temperature" class="temperature">10°</div>
-        <div id="day" class="day-name">Friday</div>
-      </section>
-      <section class="forecast">
-        <div class="forecast-item">
-          <div class="forecast-icon">🌤️</div>
-          <div class="forecast-temp">10°</div>
-          <div class="forecast-time">6am</div>
-        </div>
-        <div class="forecast-item">
-          <div class="forecast-icon">🌤️</div>
-          <div class="forecast-temp">12°</div>
-          <div class="forecast-time">9am</div>
-        </div>
-        <div class="forecast-item">
-          <div class="forecast-icon">🌤️</div>
-          <div class="forecast-temp">21°</div>
-          <div class="forecast-time">12pm</div>
-        </div>
-        <div class="forecast-item">
-          <div class="forecast-icon">🌧️</div>
-          <div class="forecast-temp">9°</div>
-          <div class="forecast-time">3pm</div>
-        </div>
-      </section>
-    </main>
-    <footer>
-      Coded by
-      <a href="https://github.com/Zakhile" target="_blank"> Ntokozo Zulu</a>,
-      code hosted on
-      <a
-        href="https://github.com/Zakhile/Ezweni-weather-services-"
-        target="_blank"
-        >GitHub</a
-      >
-      and website hosted
-      <a href="https://ezweni-weather.netlify.app/" target="_blank"
-        >on Netlify</a
-      >
-    </footer>
+        <section class="current-weather">
+          <div class="weather-icon"></div>
+          <div id="temperature" class="temperature">10°</div>
+          <div id="day" class="day-name">Friday</div>
+        </section>
+        <section class="forecast">
+          <div class="forecast-item">
+            <div class="forecast-icon">🌤️</div>
+            <div class="forecast-temp">10°</div>
+            <div class="forecast-time">6am</div>
+          </div>
+          <div class="forecast-item">
+            <div class="forecast-icon">🌤️</div>
+            <div class="forecast-temp">12°</div>
+            <div class="forecast-time">9am</div>
+          </div>
+          <div class="forecast-item">
+            <div class="forecast-icon">🌤️</div>
+            <div class="forecast-temp">21°</div>
+            <div class="forecast-time">12pm</div>
+          </div>
+          <div class="forecast-item">
+            <div class="forecast-icon">🌧️</div>
+            <div class="forecast-temp">9°</div>
+            <div class="forecast-time">3pm</div>
+          </div>
+        </section>
+      </main>
+      <footer>
+        Coded by
+        <a href="https://github.com/Zakhile" target="_blank"> Ntokozo Zulu</a>,
+        code hosted on
+        <a
+          href="https://github.com/Zakhile/Ezweni-weather-services-"
+          target="_blank"
+          >GitHub</a
+        >
+        and website hosted
+        <a href="https://ezweni-weather.netlify.app/" target="_blank"
+          >on Netlify</a
+        >
+      </footer>
+    </div>
+    <script src="src/script.js"></script>
   </body>
 </html>
