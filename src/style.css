@@ -103,6 +103,10 @@ header p {
   opacity: 0.85;
 }
 
+#description {
+  font-size: 1.4rem;
+}
+
 .current-temperature {
   display: flex;
   align-items: center;
