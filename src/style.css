@@ -36,6 +36,7 @@ body {
   max-width: 600px;
   backdrop-filter: blur(10px);
   margin: 0 auto;
+  position: relative; /* Ensure absolute positioning works within this container */
 }
 
 .search-bar {
@@ -76,16 +77,21 @@ body {
   background-color: #0056b3;
 }
 
+.date-time {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
 .date {
   font-size: 1rem;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
   opacity: 0.8;
 }
 
 .time {
-  font-size: 2.4rem;
-  font-weight: bold;
-  margin-bottom: 4px;
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 
 .location {
@@ -94,8 +100,47 @@ body {
   opacity: 0.95;
 }
 
+.material-symbols-outlined {
+  font-family: "Material Symbols Outlined", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.5rem;
+  display: inline-block;
+  line-height: 1;
+  text-decoration: inherit;
+  text-transform: none;
+  letter-spacing: normal;
+  white-space: nowrap;
+}
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+.weather-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.weather-details p {
+  margin: 0;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.weather-description {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
 .weather-icon {
   margin: 20px 0 10px 0;
+  font-size: 2.5rem;
+  color: #fff;
 }
 
 .temperature {

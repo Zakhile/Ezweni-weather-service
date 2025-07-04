@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=clear_day" />
     <title>Ezweni weather service</title>
   </head>
   <body>
@@ -20,12 +23,12 @@
               id="city-input"
               placeholder="Enter city name"
               aria-label="City Name" />
-            <button type="submit">Search</button>
+            <button type="submit" id="search-button">Search</button>
           </form>
         </section>
         <section class="datetime">
-          <p id="date">Friday, 4th July</p>
-          <p id="time" class="time-large">10:06am</p>
+          <p id="date" class="date">Friday, 4th July</p>
+          <p id="time" class="time">10:06am</p>
         </section>
 
         <section class="location">
@@ -33,9 +36,17 @@
         </section>
 
         <section class="current-weather">
-          <div class="weather-icon"></div>
-          <div id="temperature" class="temperature">10°</div>
-          <div id="day" class="day-name">Friday</div>
+          <div class="weather-description">
+            <p id="description">Clear Sky</p>
+          </div>
+          <div class="weather-details">
+            <p id="humidity">Humidity: 50%</p>
+            <p id="wind-speed">Wind Speed: 10 km/h</p>
+            <div class="weather-icon">
+              <span class="material-symbols-outlined">clear_day</span>
+            </div>
+            <div id="temperature" class="temperature">10°</div>
+          </div>
         </section>
         <section class="forecast">
           <div class="forecast-item">
