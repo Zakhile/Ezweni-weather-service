@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(180deg, #5bc6f7 0%, #b3e0fc 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.weather-app {
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  text-align: center;
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
+  width: 100%;
+  max-width: 360px;
+  backdrop-filter: blur(10px);
+}
+
+.search-bar {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+#city-input {
+  flex: 1 1 180px;
+  padding: 10px 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#search-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#search-button:hover {
+  background-color: #0056b3;
+}
+
+.date {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  opacity: 0.8;
+}
+
+.time {
+  font-size: 2.4rem;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.location {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  opacity: 0.95;
+}
+
+.weather-icon {
+  margin: 20px 0 10px 0;
+}
+
+.temperature {
+  font-size: 3.2rem;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.day {
+  font-size: 1.3rem;
+  margin-bottom: 18px;
+}
+
+.forecast {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+
+.forecast > div {
+  flex: 1 1 60px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px 0;
+  border-radius: 12px;
+}
+
+.forecast-icon {
+  font-size: 1.4rem;
+}
+
+.forecast-temp {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.forecast-time {
+  font-size: 0.85rem;
+  opacity: 0.85;
+}
+footer {
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #ccc;
+}
