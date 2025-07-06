@@ -10,8 +10,6 @@ function refreshWeather(response) {
   let date = new Date(response.data.time * 1000);
   let iconElement = document.querySelector("#icon");
 
-  console.log("Condition data:", response.data.condition);
-
   cityElement.innerHTML = response.data.city;
   temperatureElement.innerHTML = Math.round(temperature);
   descriptionElement.innerHTML = response.data.condition.description;
@@ -27,6 +25,7 @@ function refreshWeather(response) {
   descriptionElement.innerHTML = response.data.condition.description;
 
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon"/>`;
+  getForecast(response.data.city);
 }
 
 function formatDate(date) {
@@ -54,7 +53,15 @@ function handleSearchSubmit(event) {
   searchCity(searchInput.value);
 }
 
-function displayForecast() {
+function getForecast(city) {
+  let apiKey = "bc892e6f8cb423o2f786c3ctf8a06c3a";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
+  console.log(response.data);
+
   let forecast = document.querySelector("#forecast");
   let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
   let forcastHtml = "";
@@ -79,4 +86,3 @@ let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Pretoria");
-displayForecast();
