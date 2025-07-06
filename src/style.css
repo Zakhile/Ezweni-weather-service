@@ -151,7 +151,7 @@ strong {
 }
 
 .forecast-item {
-  flex: 1 1 60px;
+  flex: 1 1 70px;
   text-align: center;
   background: rgba(255, 255, 255, 0.1);
   padding: 12px 8px;
@@ -162,19 +162,35 @@ strong {
   gap: 6px;
 }
 
-.forecast-icon {
-  font-size: 1.6rem;
+/* Styling for the container that holds the image */
+.forecast-icon-container {
+  width: 44px; /* Set the container's dimensions */
+  height: 44px;
+  display: flex; /* Use flexbox to easily center the image within */
+  justify-content: center;
+  align-items: center;
+  /* You might also add border-radius, background, etc. to this container */
+}
+
+/* Styling for the image itself */
+.forecast-image {
+  max-width: 100%; /* Ensures the image fits within its container */
+  max-height: 100%; /* Ensures the image fits within its container */
+  /* If you want it to always be exactly 44x44 and potentially stretch: */
+  /* width: 100%; */
+  /* height: 100%; */
+  /* object-fit: contain; /* or 'cover' to control how it fits */
 }
 
 .forecast-temp {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   color: #123458;
 }
 
 .forecast-temp .min,
 .forecast-temp .max {
-  font-size: 16px; /* Set both to the same size */
+  font-size: 14px; /* Set both to the same size */
 }
 .forecast-day {
   font-size: 0.85rem;
