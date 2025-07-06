@@ -18,15 +18,7 @@ function refreshWeather(response) {
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
   windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
 
-  let daysOfWeek = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
+  let daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
   let dayName = daysOfWeek[date.getDay()];
   currentDateElement.innerHTML = dayName;
 
@@ -62,7 +54,29 @@ function handleSearchSubmit(event) {
   searchCity(searchInput.value);
 }
 
+function displayForecast() {
+  let forecast = document.querySelector("#forecast");
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+  let forcastHtml = "";
+
+  days.forEach(function (day) {
+    forcastHtml += `
+      <div class="forecast-item">
+        <div class="forecast-day">${day}</div>
+        <div class="forecast-icon">🌤️</div>
+        <div class="forecast-temp">
+          <strong><span class="min">10°</span></strong>
+          <span class="max">15°</span>
+        </div>
+      </div>
+    `;
+  });
+
+  forecast.innerHTML = forcastHtml;
+}
+
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Pretoria");
+displayForecast();
