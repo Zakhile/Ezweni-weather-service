@@ -8,20 +8,17 @@ function refreshWeather(response) {
   let timeElement = document.querySelector("#time");
   let currentDateElement = document.querySelector("#current-date");
   let date = new Date(response.data.time * 1000);
+  let iconElement = document.querySelector("#icon");
+
+  console.log("Condition data:", response.data.condition);
 
   cityElement.innerHTML = response.data.city;
   temperatureElement.innerHTML = Math.round(temperature);
   descriptionElement.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
   windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
-  timeElement.innerHTML = formatDate(date);
-  currentDateElement.innerHTML = day;
-}
 
-function formatDate(date) {
-  let minutes = date.getMinutes();
-  let hours = date.getHours();
-  let days = [
+  let daysOfWeek = [
     "Sunday",
     "Monday",
     "Tuesday",
@@ -30,14 +27,25 @@ function formatDate(date) {
     "Friday",
     "Saturday",
   ];
+  let dayName = daysOfWeek[date.getDay()];
+  currentDateElement.innerHTML = dayName;
 
-  let day = days[date.getDay()];
+  timeElement.innerHTML = formatDate(date);
+
+  descriptionElement.innerHTML = response.data.condition.description;
+
+  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon"/>`;
+}
+
+function formatDate(date) {
+  let minutes = date.getMinutes();
+  let hours = date.getHours();
 
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
 
-  return `${day} ${hours}:${minutes}`;
+  return `${hours}:${minutes}`;
 }
 
 function searchCity(city) {
